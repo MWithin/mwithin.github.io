@@ -94,16 +94,8 @@ body {
 }
 
 .text-block {
-    &.morning > strong {
-        color: $morning-accent;
-    }
-
-    &.afternoon > strong {
-        color: $afternoon-accent;
-    }
-
-    &.evening > strong {
-        color: $evening-accent;
+    strong {
+        color: $accent;
     }
 }
 
@@ -137,6 +129,21 @@ body {
     }
 }
 
+.section .two-col {
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    > .col {
+        margin: 20px;
+    }
+    
+    > :first-child {
+        max-width: 300px;
+        flex-shrink: 0;
+    }
+}
+
 #excerpt {
     padding-left: 24px;
     max-width: 90%;
@@ -160,17 +167,8 @@ body {
     }
     
     :last-child {
-        &.morning {
-            background-image: $morning;
-        }
-
-        &.afternoon {
-            background-image: $afternoon;
-        }
-
-        &.evening {
-            background-image: $evening;
-        }
+        background-image: $greeting-gradient;
+        border-radius: 5px;
 
         color: $white;
         font-style: italic;
@@ -208,6 +206,11 @@ body {
     }
 }
 
+.section-image img {
+    width: 95%;
+    vertical-align: middle;
+}
+
 .timeline-table {
     margin-bottom: 30px;
     
@@ -215,7 +218,6 @@ body {
     grid-template-columns: auto 1fr;
     
     .timeline-time {
-        width: 400px;
         text-align: right;
         margin-right: 20px;
     }
@@ -225,9 +227,11 @@ body {
         .entry-heading {
             font-weight: bold;
         }
-        .entry-subheading {
+        .entry-subtitle {
             font-style: italic;
             margin-bottom: 10px;
+            display: inline-grid;
+            width: 100%;
         }
     }
 }
@@ -296,6 +300,22 @@ h1 {
     .section {
         margin-left: 0;
         margin-right: 0;
+    }
+    
+    .section .two-col {
+        flex-direction: column;
+        
+        > :first-child {
+            max-width: 100%;
+            margin: auto;
+            
+            img {
+                max-width: calc(min(400px, 100%));
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
     }
     
     #intro {

@@ -1,6 +1,6 @@
-# avarsh.github.io
+# mwithin.github.io
 
-My personal website and blog, written in pure HTML/CSS/JS with no additional frameworks.
+My personal website and blog, based on [this template](https://github.com/avarsh/avarsh.github.io).
 The `generate-blog-page.sh` script takes care of generating the posts using the above command and updating the blog page, by 
 reading the `blog/markdown/directory` file which contains the details of each post in the following format
 ```

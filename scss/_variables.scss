@@ -4,9 +4,22 @@ $fg: #333333;
 $white: #fff;
 $sunset-red: #ff4b50;
 
+$dark-turquoise: #0d1d1a;
+$turquoise: #142f2a;
+$dark-green: #103b20;
+$green: #255235;
+$yellow: #ad8a38;
+$orange: #9e6329;
+
 $morning: linear-gradient(#ff0f7b, #f89b29);
 $afternoon: linear-gradient(#7113FF, #00EEC6);
 $evening: linear-gradient(#1D2671, #C33764);
+
+$blue: #074472;
+$light-green: #85ff85;
+
+$greeting-gradient: linear-gradient(to bottom right, $light-green, $blue);
+$accent: $green;
 
 $morning-accent: #ec141c;
 $afternoon-accent: #5617eb;
