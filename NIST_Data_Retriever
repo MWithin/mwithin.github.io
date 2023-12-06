@@ -1,0 +1,49 @@
+#Python Script to extract data for the NIST database and put in a excel file.
+
+import re, os, requests, zipfile
+from urllib.parse import urlparse, parse_qs
+from bs4 import BeautifulSoup, Comment
+import pandas as pd
+
+_NIST_URL = 'https://webbook.nist.gov'
+_COMP_ID = '/cgi/fluid.cgi'
+
+_PARAMS = {
+    'RefState' : 'DEF',
+    'STUnit' : 'N/m',
+    'VisUnit' : 'Pa*s',
+    'WUnit' : 'm/s',
+    'HUnit' : 'kJ/mol',
+    'DUnit' : 'mol/l',
+    'PUnit' : 'MPa',
+    'TUnit' : 'K',
+    'P' : '1.0',
+    'Digits': '5',
+    'Action': 'Load',
+    'ID': 'C7440597',
+    'Units': 'SI',
+    'Type': 'IsoBar'
+}
+
+r = requests.get(_NIST_URL + _COMP_ID, _PARAMS)
+# print(r.text)
+
+
+soup = BeautifulSoup(r.text,"lxml")
+tables = soup.findAll("table")
+heading = [[cell.text for cell in row] for row in tables[0]("th")]
+dataset = [[cell.text for cell in row("td")]
+                         for row in tables[0]("tr")]
+print(heading)
+Heading = str(heading).replace('[','').replace(']','').replace('\'','').replace('\"','')
+print(dataset[1:5])
+
+f= open("test_file.csv","a")
+f.write(str(Heading)+'\n')
+
+for x in range(100):
+        line = dataset[x]
+        Line = str(line).replace('[','').replace(']','').replace('\'','').replace('\"','')
+        f.write(str(Line)+'\n')
+
+f.close()
