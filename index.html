@@ -1,131 +1,184 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Margaret-Ann's Website
-        </title>
-        <link rel="stylesheet" href="css/page.css">
+        <title>Margaret-Ann's Tutoring Site</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+
+        <meta charset="UTF-8">
+        <meta name="robots">
+        <meta name="description" content="GCSE Maths Tutoring in Derby">
+        <meta name="keywords" content="Maths, GCSEs, Derby, Tutoring, Tutor, Tuition">
+        <meta name="author" content="Dr Gupta">
+
+        <script type="application/ld+json">
+            {
+              "@context" : "https://schema.org",
+              "@type" : "WebSite",
+              "name" : "Dr. Gupta's Maths Tutoring",
+              "url" : "https://dr-gupta.github.io"
+            }
+        </script>
     </head>
+
     <body>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <div class="page">
-            <!-- The navigation bar -->
-            <div class="navbar">
-                <a class="navbar-item reset-a focused" href="/">
-                    <span class="navbar-item-text">Margaret-Ann</span>
-                </a>
-                
-                <div class="navbar-spacer">    
-                </div>
-                
-                <div class="navbar-right">
-                    <a class="navbar-item reset-a" href="/blog.html">
-                        <span class="navbar-item-text">Blog</span>
-                    </a>
-                    
-                    <a class="navbar-item reset-a" href="https://github.com/avarsh">
-                        <span class="navbar-item-text">Github</span>
-                    </a>
-                </div>
-            </div>
-            
-            
-            <!-- Intro -->
-            <div class="two-col" id="intro">
-                <div class="col">
-                    <span class="vertical-align-helper"></span>
-                    <img src="assets/profile.jpg" alt="Margaret-Ann" id="profile-image">
-                </div>
-                
-                <div class="col">
-                    <div id="greeting" class="two-col">
-                        <div class="col">
-                            Good
-                        </div>
-                        <div class="col" id="greeting-time">
-                            morning!
-                        </div>
-                    </div>
-                    <div>
-                        <p id="excerpt" class="text-block">
-                            Write introduction here. Use the <strong>strong tag</strong> to make stuff bold.
-                        </p>
-                    </div>
-                </div>
+
+        <!-- Content block will be centered on the page. -->
+            <div class="bar">
+                MA Tutoring - Smart, Supportive, and Stress-Free Tutoring with a Friendly Expert!
             </div>
 
-            <!-- Section -->
-            <div class="section">
-                <div class="section-heading">Section Heading</div>
-                    
-                <div class="two-col">
-                    <div class="section-image col">
-                        <span class="vertical-align-helper"></span>
-                        <img src="assets/profile.jpg" alt="Margaret-Ann">
-                    </div>
-                    
-                    <div class="timeline-table col">
-                        
-                        <div class="timeline-entry">
-                            <div class="entry-heading">
-                                Title
+            <div class="section" id="header">
+
+                <div class="content">
+                
+                    <div class="two-col">
+
+                        <div class="col1">
+                            <img src="profile.png" alt="Profile Image"> 
+                        </div>
+
+                        <div class="col2">
+                            <h1>Howdy!</h1>
+                            <br>
+
+                            Hi, I'm Margaret-Ann, a GCSE and A-level tutor in North East London. 
+                            I offer tutoring in a range of subjects.
+                            My specialty is mathematics and physics but I cover all the 
+                            sciences up to GCSE level. 
+                            <br><br>
+                            I have an integrated masters in mathematics and physics
+                            and have many years experience tutoring including at university level. 
+                            I love teaching and helping students achieve their goals.  
+                            <br><br>
+                            My tutoring prices begin from £40 per hour with some discounts avaliable for multiple hour bookings and multi-student bookings.
+
+                            <div id="contact-btn">
+                                <button onClick="document.getElementById('contact').scrollIntoView();">Contact Me</button>
                             </div>
-                            <div class="entry-subtitle">
-                                <span class="entry-subheading">
-                                    Subtitle
-                                </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section" id="subjects">
+
+                <div class="content">
+                    <h2>Subjects Offered</h2>
+
+                    <div class="card-holder">
+                        <div class="card reset-a">
+                            <div class="card-head">
+                                <div class="card-title">
+                                    GCSE
+                                </div>
                             </div>
                             
-                            <div class="entry-contents text-block">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan, enim vel venenatis gravida, nulla dolor ultricies tellus, a vehicula odio leo sed odio. Suspendisse at lectus pretium, porttitor arcu sit amet, rhoncus sapien. Donec lacinia ligula nisl, id pulvinar nulla dignissim ut. Ut non lectus odio. Praesent pretium libero odio, ac scelerisque purus venenatis id. Duis ultricies maximus tellus. Sed sagittis leo sit amet mauris tincidunt porttitor. Sed sed massa erat.
+                            <div class="card-content text-block dynamic">
+                                <ul>
+                                    <li>Mathematics</li>
+                                    <li>Further Mathematics</li>
+                                    <li>Statistics</li>
+                                    <li>Physics</li>
+                                    <li>Biology</li>
+                                    <li>Chemistry</li>
+                                    <li>Combined Sciences</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card reset-a">
+                            <div class="card-head">
+                                <div class="card-title">
+                                    A-Level
+                                </div>
+                            </div>
+
+                            <div class="card-content text-block dynamic">
+                                <ul>
+                                    <li>Mathematics</li>
+                                    <li>Physics</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+
+                        <div class="card reset-a">
+                            <div class="card-head">
+                                <div class="card-title">
+                                    General
+                                </div>
+                            </div>
+                            <div class="card-content text-block dynamic">
+                                <ul>
+                                    <li>Maths Skills for Life</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Cards -->
-            <div class="section">
-                <span class="section-heading">Card Section</span>
-                
-                <div class="card-holder">
-                    <a class="card reset-a" href="/link-goes-here">
-                        <div class="card-head">
-                            <div class="card-title">
-                                Card Title
+
+            <!--
+            <div class="section" id="testimonials">
+                <div class="content">
+                    <h2>Testimonials</h2>
+
+                    <div class="card-holder">
+                        <div class="card reset-a">
+                            <div class="card-head">
+                                <div class="card-title">
+                                    Riddhima
+                                </div>
+
+                                <div class="card-subtitle">
+                                    
+                                </div>
                             </div>
-                            <div class="card-subtitle">
-                                Card Subtitle
+                            
+                            <div class="card-content text-block dynamic">
+                                
                             </div>
                         </div>
-                        <div class="card-content text-block">
-                            Card Description
+                        
+                        <div class="card reset-a">
+                            <div class="card-head">
+                                <div class="card-title">
+                                    Michael
+                                </div>
+                                <div class="card-subtitle">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="card-content text-block dynamic">
+                                
+                            </div>
+                            
                         </div>
-                    </a>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="section" id="contact">
+                <div class="content">
+                    <h2>Contact Details</h2>
+                    Please do not hesitate to get in touch.
+                    <br><br>
+                    E-mail:
                 </div>
             </div>
 
-            <script>
-                var today = new Date()
-                var curHr = today.getHours()
-                const dynamicElems = document.getElementsByClassName("dynamic");
-                var greeting;
+            <div class="footer">
+                Website made by <a href="https://avarsh.github.io">Aporva Varshney</a>
+            </div>
 
-                if (curHr < 12) {
-                    greeting = "morning";
-                } else if (curHr < 18) {
-                    greeting = "afternoon";
-                } else {
-                    greeting = "evening";
-                }
-
-                document.getElementById("greeting-time").innerHTML = greeting;
-
-                for (var i = 0; i < dynamicElems.length; i++) {
-                    dynamicElems[i].classList.add(greeting);
-                }
-            </script>
         </div>
-
     </body>
 </html>
